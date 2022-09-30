@@ -1,0 +1,50 @@
+import java.util.Scanner;  // Import the Scanner class
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter score 1: ");
+
+        double score1 = input.nextDouble();  // Read user input for score 1
+        System.out.println("Score 1 is: " + score1);
+
+        System.out.println("Enter score 2: ");
+
+        double score2 = input.nextDouble();  // Read user input for score 2
+        System.out.println("Score 2 is: " + score2);
+
+        System.out.println("Enter score 3: ");
+
+        double score3 = input.nextDouble();  // Read user input for score 3
+        System.out.println("Score 3 is: " + score3);
+
+        //calculate averages
+        double average = (score1 + score2 + score3)/3;
+        System.out.println("The average is " + average);
+
+        //determine letter grade
+        char lettergrade;  //must declare variable lettergrade outside of curly braces
+        if (average >= 90 && average <= 100)
+        {
+            lettergrade = 'A';
+        }
+        else if (average >= 80) //only come to this else if, if average < 90
+        {
+            lettergrade = 'B';
+        }
+        else if (average >= 70)
+        {
+            lettergrade = 'C';
+        }
+         else if (average >= 60)
+        {
+            lettergrade = 'D';
+        }
+        else
+        {
+            lettergrade = 'F';
+        }
+        System.out.println("Your average test score is " + average + "." + "You earned a " + lettergrade + ".");
+    }      
+}
